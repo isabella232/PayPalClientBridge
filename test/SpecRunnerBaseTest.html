@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.1.0.rc1/jasmine_favicon.png">
+
+	<link rel="stylesheet" href="lib/jasmine-core/jasmine.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+
+	<script src="lib/jasmine-core/jasmine.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/jasmine-core/jasmine-html.js" type="text/javascript" charset="utf-8"></script>
+	
+
+  <!-- include spec files here... -->
+<script src="ppbridge/CoreSpecBaseTest.js" type="text/javascript" charset="utf-8"></script>
+
+
+  <!-- include source files here... -->
+  <script src="../js/lib/nativebridge/ppbridge.base.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+		var htmlReporter = new jasmine.HtmlReporter();
+		  jasmineEnv.addReporter(htmlReporter);
+		  jasmineEnv.specFilter = function(spec) {
+		    return htmlReporter.specFilter(spec);
+		  };
+	
+		  var currentWindowOnload = window.onload;
+		  window.onload = function() {
+		    if (currentWindowOnload) {
+		      currentWindowOnload();
+		    }
+
+		    document.querySelector('.version').innerHTML = jasmineEnv.versionString();
+		    execJasmine();
+		  };
+
+		  function execJasmine() {
+		    jasmineEnv.execute();
+		  }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+	<h2>Test for the PPBridge Core and the iOS Device</h2>
+	<div class="version"></div>
+</body>
+</html>
