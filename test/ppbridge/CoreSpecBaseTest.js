@@ -95,29 +95,31 @@ describe("PPBridge Test Functionality", function(){
 		
 
 			
-	// it("Test getAction", function(){
-	// 	expect(PPBridge.getAction("ActionToSetTitleBar")).toEqual(JSON.stringify(actionToSetTitleBar));
-	// });
-	
-  it("Test Set Multiple Dynamic Actions with 110 ms time interval", function(){
-   var i = 0;
-     interval = undefined;
-     
-     expect(Object.keys(JSON.parse($.NativeBridge.getAction("*"))).length).toEqual(1);
-     
-     clearInterval(interval);
-     
-     interval = setInterval(function(){
-       if (i<10){
-         i = i + 1;
-         //expect(PPBridge.call(actionToSetTitleBar)).toEqual("jsr://SetTitleBar/ActionToSetTitleBar");
-         expect(Object.keys(JSON.parse($.NativeBridge.getAction("*"))).length).toEqual(i+1);
-       }
-       else {
-         clearInterval(interval);
-       }
-     },110);
-  });
+	it("Test Set Multiple Dynamic Actions with 110 ms time interval", function(){
+		var i = 0;
+			interval = undefined;
+			
+			waits(function(){
+				expect(Object.keys(JSON.parse(PPBridge.getAction("*"))).length).toEqual(1);
+			},30);
+			
+			
+			clearInterval(interval);
+			
+			interval = setInterval(function(){
+				if (i<10){
+					i = i + 1;
+					waits(function(){
+						expect(PPBridge.call(actionToSetTitleBar)).toEqual("jsr://SetTitleBar/ActionToSetTitleBar");
+						expect(Object.keys(JSON.parse(PPBridge.getAction("*"))).length).toEqual(i+1);
+					}, 30);
+
+				}
+				else {
+					clearInterval(interval);
+				}
+			},110);
+	});
 	
 	it("Test Set Multiple Dynamic Actions without time interval", function(){
 		var i;
