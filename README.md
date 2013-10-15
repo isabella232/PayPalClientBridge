@@ -20,7 +20,9 @@ How To Use
 ==========
 
   Include the js/ppbridge.base.js to your page
+  
   Initialize the bridge by calling PayPalApp.init(bridgeConfig)
+  
   Call the Bridge as needed -> PayPalApp.call("MerchantTitleBar")
 
 
