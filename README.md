@@ -6,7 +6,7 @@ The PayPalClientBridge provides the capability for a web application (HTML/CSS/J
 
 Here's a sample images on the integration of the PayPal Wallet App with Jamba Juice
 
-![Screen shots](https://raw.github.com/paypal/PayPalClientBridge/img/JambaJuice.png)
+![Screen shots](https://raw.github.com/paypal/PayPalClientBridge/master/img/JambaJuice.png)
 
 
 Author
