@@ -1,7 +1,12 @@
 PayPalClientBridge
 ==================
 
-The Public Version of the PayPal Client to Javascript Bridge
+The PayPalClientBridge provides the capability for a web application (HTML/CSS/JS) embedded in a WebView in the PayPal Apps (Wallet and Here) for iOS and Android to communicate and request for a limited resource or native UI to be displayed and can be acted upon by a user.
+
+
+Here's a sample images on the integration of the PayPal Wallet App with Jamba Juice
+
+![Screen shots](https://raw.github.com/paypal/PayPalClientBridge/img/JambaJuice.png)
 
 
 Author
