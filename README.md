@@ -54,7 +54,7 @@ Integration
 ### Requirements
 
 * PayPal Wallet/Here App
-* Web hosting is SSL
+* SSL Web hosting
 * PayPal Here Merchant
 
 
