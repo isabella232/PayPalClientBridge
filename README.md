@@ -27,6 +27,7 @@ Repository
 - [Integration](#integration)
 	- [Requirements](#requirements)
 	- [Initial Setup](#initial-setup)
+- [Tests](#tests)
 
 
 
@@ -201,4 +202,9 @@ Integration
 	```js
 	PayPalApp.call("MerchantTitleBar");
 	```
+
+
+### Tests
+
+* Run test/SpecRunnerBaseTest.html to see if the library is working properly
 
