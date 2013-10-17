@@ -1,4 +1,4 @@
-The PayPalClientBridge files and the PayPal iOS SDK Sample App are released under the BSD License:
+The PayPalClientBridge files are released under the BSD License:
 
     Copyright (c) 2013, PayPal
     All rights reserved.
