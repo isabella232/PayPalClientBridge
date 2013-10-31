@@ -18,7 +18,7 @@ Author
 Repository
 ==========
 
-  https://github.paypal.com/PayPalClientBridge
+  https://github.com/paypal/PayPalClientBridge
 
 
 ### Table of Contents
